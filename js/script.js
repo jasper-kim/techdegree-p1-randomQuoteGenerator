@@ -42,16 +42,18 @@ quotes = [
   }
 ];
 
-console.log(quotes);
-
-
-
 /***
   Create the `getRandomQuote` function to:
    - Create a variable to store a random number 
    - Cse the random number to `return` a random quote object from the `quotes` array.
 ***/
+function getRandomQuote () {
+  let randomQuote;
+  randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+  return randomQuote;
+}
 
+console.log(getRandomQuote());
 
 
 
