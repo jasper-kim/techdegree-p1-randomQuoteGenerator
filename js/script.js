@@ -14,7 +14,35 @@ project 1 - A Random Quote Generator
   Add the `year` property to at least one object in the array.
   Use console.log() to log your array of quotes to the console.
 ***/
+let quotes = [];
+quotes = [
+  {
+    quote: 'One more thing...',
+    source: 'Steve Jobs'
+  },
+  {
+    quote: 'May the Force be with you.',
+    source: 'Star Wars',
+    citation: 'Movie',
+    year: 1977
+  },
+  {
+    quote: 'You never really understand a person until you consider things from his point of view … Until you climb inside of his skin and walk around in it.',
+    source: 'To Kill a Mockingbird by Harper Lee',
+    citation: 'Book',
+    year: 1960
+  },
+  {
+    quote: 'We are shaped by our thoughts; we become what we think. When the mind is pure, joy follows like a shadow that never leaves.',
+    source: 'Gautama Buddha'
+  },
+  {
+    quote: 'Think like a queen. A queen is not afraid to fail. Failure is another stepping-stone to greatness.',
+    source: 'Oprah Winfrey'
+  }
+];
 
+console.log(quotes);
 
 
 
