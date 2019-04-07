@@ -44,8 +44,16 @@ function getRandomQuote () {
 }
 
 
+//To exceed expactation: create the 'changeBGColor' function to change background color randomly.
+function changeBGColor () {
+  let bgColor = colors[Math.floor(Math.random() * colors.length)];
+  document.body.style.backgroundColor = bgColor;
+}
+
+
 // Create the `printQuote` function to return the HTML code that contains values of the quote object created by the function getRandomQuote.
 // To exceed expactation: add a conditional statement to display 'category' property.
+// To exceed expactation: call the 'changeBGColor' function in the printQuote function.
 function printQuote () {
   let randomeQuote = getRandomQuote();
   let html = '';
@@ -62,13 +70,8 @@ function printQuote () {
   }
   html += '</p>';
   document.getElementById('quote-box').innerHTML = html;
-}
 
-
-//To exceed expactation: create the 'changeBgColor' function to change background color randomly.
-function changeBgColor () {
-  let bgColor = colors[Math.floor(Math.random() * colors.length)];
-  document.body.style.backgroundColor = bgColor;
+  changeBGColor ();
 }
 
 
@@ -76,11 +79,7 @@ function changeBgColor () {
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
 
-//To exceed expactation: call the 'changeBgColor' function when clicking the "Show another quote" button in index.html.
-document.getElementById('loadQuote').addEventListener("click", changeBgColor, false);
-
 //To exceed expactation: add the 'setInterval' method to show a new quote every 10 seconds.
 setInterval(function(){
   printQuote();
-  changeBgColor();
 }, 10000);
