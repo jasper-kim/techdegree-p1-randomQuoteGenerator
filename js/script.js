@@ -53,10 +53,6 @@ function getRandomQuote () {
   return randomQuote;
 }
 
-console.log(getRandomQuote());
-
-
-
 /***
   Create the `printQuote` function to: 
    - Call the `getRandomQuote` function and assign it to a variable.
@@ -69,7 +65,20 @@ console.log(getRandomQuote());
    - Don't forget to close that final `p` tag.
    - Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
-
+function printQuote () {
+  let randomeQuote = getRandomQuote();
+  let html = '';
+  html += '<p class="quote">' + randomeQuote.quote + '</p>';
+  html += '<p class="source">' + randomeQuote.source;
+  if(randomeQuote.citation){
+    html += '<span class="citation">' + randomeQuote.citation + '</span>';
+  } 
+  if(randomeQuote.year){
+    html += '<span class="year">' + randomeQuote.year + '</span>';
+  }
+  html += '</p>';
+  document.getElementById('quote-box').innerHTML = html;
+}
 
 
 
